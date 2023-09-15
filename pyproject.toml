@@ -115,8 +115,8 @@ description = "Demo django-project."
 readme = "docs/readme.md"
 authors = ["Wouter Vanden Hove <wouter@libranet.eu>"]
 maintainers = ["Wouter Vanden Hove <wouter@libranet.eu>"]
-homepage = "https://github.com/woutervh/libranet-django"
-repository = "https://github.com/woutervh/libranet-django"
+homepage = "https://github.com/libranet/libranet-django"
+repository = "https://github.com/libranet/libranet-django"
 documentation = "https://libranet-django.readthedocs.io"
 
 keywords = []
@@ -143,16 +143,15 @@ classifiers = [
 [tool.poetry.dependencies]
 python = ">=3.10.0,<4.0"
 autoread-dotenv = ">=0.0"
+django = ">=4.2.5"
+django-ninja = ">=0.19"
 httpx = ">=0.24"
 libranet-logging = ">=0.0"
 python-dateutil = ">=2.8"
 python-multipart = ">=0.0"
 pydantic = "=1.10"
-# python-dotenv = ">=1.0"
-# sitecustomize-entrypoints = ">=0.1"
 typer = ">=0.0"
-django-ninja = ">=0.19"
-wagtail = ">=4.1"
+# wagtail = ">=4.1"
 
 
 [tool.poetry.group.dev.dependencies]
