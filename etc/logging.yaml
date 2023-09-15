@@ -231,7 +231,6 @@ loggers:
         handlers:
             - libranet_django_file
 
-    
     django:
         level: !env LOGLEVEL_DJANGO, DEBUG
         handlers: # review
@@ -243,7 +242,6 @@ loggers:
             - django_db_backends_handler
         propagate': False
     
-
     dotenv:
         level: !env LOGLEVEL_DOTENV, NOTSET
 

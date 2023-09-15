@@ -22,7 +22,7 @@
 
 
 .PHONY: install  ## full initial installation
-install: create-dirs create-dirs-extra dotenv-install poetry-install symlink-venv-dirs
+install: create-dirs create-dirs-extra dotenv-install poetry-install symlink-venv-dirs create-demo-project
 
 
 .PHONY: create-dirs-extra  ## create additional directories
@@ -45,3 +45,8 @@ create-dirs-extra:
 	mkdir -p var/data
 	mkdir -p var/static
 	mkdir -p var/upload
+
+
+.PHONY: create-demo-project  ## create a demo project
+create-demo-project:
+	cd var/tmp && bin/django-admin startproject demo1
