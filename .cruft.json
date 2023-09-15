@@ -1,0 +1,30 @@
+{
+  "template": "https://github.com/libranet/kickstart-python-project",
+  "commit": "9df695cb3a4801454903f2ae047cdd50c3b8b42b",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "libranet-django",
+      "package_name": "libranet_django",
+      "description": "Demo django-project.",
+      "author": "Wouter Vanden Hove",
+      "email": "wouter@libranet.eu",
+      "git_platform": "github",
+      "github_user": "woutervh",
+      "version": "0.1",
+      "copyright_year": "2023",
+      "license": "MIT",
+      "development_status": "Development Status :: 4 - Beta",
+      "minimum_python": "3.10.0",
+      "with_django": "1",
+      "with_flask": "0",
+      "with_fastapi": "0",
+      "with_typer": "1",
+      "with_postgres": "0",
+      "support_rtd": "1",
+      "__package_name_snake_case": "libranet_django",
+      "_template": "https://github.com/libranet/kickstart-python-project"
+    }
+  },
+  "directory": null
+}
