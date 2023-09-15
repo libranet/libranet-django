@@ -13,11 +13,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os 
 import pkg_resources
 import pathlib as pl
+import typing as tp
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = pl.Path(__file__).resolve().parent.parent
-DB_DIR = pl.Path(os.getenv("DB_DIR"))
+DB_DIR = pl.Path(os.getenv("DB_DIR", ""))
 
 
 # Quick-start development settings - unsuitable for production
@@ -29,7 +30,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG")
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: tp.List[str]  = []
 
 
 # Application definition

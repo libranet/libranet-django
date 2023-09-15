@@ -12,7 +12,7 @@ def test_cli():
     from libranet_django.cli import main
 
     # Invoke the main() function
-    result = CliRunner().invoke(main)
+    result = CliRunner().invoke(main)  # type: ignore
 
     assert result.output.strip() == "libranet_django."
 
