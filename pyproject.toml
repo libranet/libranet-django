@@ -347,5 +347,5 @@ commands =
 
 [tool.ruff]
 # https://beta.ruff.rs/docs/configuration/
-cache-dir = "var/cache/ruff"
+# cache-dir = "var/cache/ruff"  # relative to $PWD
 line-length = 120
