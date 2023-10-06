@@ -22,7 +22,7 @@
 
 
 .PHONY: install  ## full initial installation
-install: create-dirs create-dirs-extra dotenv-install poetry-install symlink-venv-dirs 
+install: create-dirs create-dirs-extra dotenv-install poetry-install symlink-venv-dirs ipython-symlink-to-ip
 
 
 .PHONY: create-dirs-extra  ## create additional directories
