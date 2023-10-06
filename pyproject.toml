@@ -228,7 +228,6 @@ tox = ">=4.4"
 
 [tool.poetry.group.webtesting.dependencies]
 httpie = ">=3.2"
-locust = ">=2.11"
 # extra django-deps
 pytest-django = ">=4.5.2"
 
