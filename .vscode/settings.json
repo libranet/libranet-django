@@ -20,6 +20,7 @@
     "makefile.makefilePath": "makefile", // Makefile is default
     "makefile.configurations": [],
     // https://code.visualstudio.com/docs/python/settings-reference
+    //"python.analysis.cachePath": "${workspaceFolder}/var/cache/vscode-analysis",
     "python.envFile": "${workspaceFolder}/.env",
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.linting.enabled": true,
