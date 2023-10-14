@@ -164,6 +164,7 @@ flake8-pyproject = ">=1.2"
 flake8-pytest-style = ">=1.6"
 flake8-rst-docstrings = ">=0.2"
 isort = ">=5.10"
+# pdb++
 pep8-naming = ">=0.12"
 pre-commit = ">=2.14"
 pre-commit-hooks = ">=4.1"
@@ -308,7 +309,7 @@ disable = [
 ]
 
 [tool.pytest.ini_options]
-cache_dir = "var/cache/pytest"
+# cache_dir = "var/cache/pytest"  # relative to $PWD, use PYTEST_CACHE_DIR instead
 log_cli = false                   # enable to show log-output
 log_cli_level = "NOTSET"
 filterwarnings = []
@@ -316,6 +317,7 @@ markers = ["unit", "integration"]
 testpaths = ["tests"]
 # the junit-report is used to report coverage in gitlab
 addopts = "--color=yes --junit-xml='var/coverage/pytest.xml'"
+# addopts = "--color=yes --junit-xml='var/coverage/pytest.xml' --pdbcls=IPython.terminal.debugger:TerminalPdb"
 
 
 # [tool.tox.legacy_tox_ini]
@@ -345,6 +347,9 @@ commands =
 
 
 [tool.ruff]
-# https://beta.ruff.rs/docs/configuration/
-# cache-dir = "var/cache/ruff"  # relative to $PWD
+# ruff searches for settings in the target-dir and up
+# https://docs.astral.sh/ruff/configuration
+cache-dir = "var/cache/ruff"  # relative to $PWD
 line-length = 120
+
+
