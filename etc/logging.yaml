@@ -186,7 +186,7 @@ handlers:
         formatter: "generic"
         level: "DEBUG"
 
-    
+
     django_db_backends_handler:
         <<: *default
         filename: django-db-backends.log
@@ -198,7 +198,7 @@ handlers:
         level: DEBUG
         # formatter: django.server
         formatter: !env PYTHON_CONSOLE_FORMATTER, console_bw
-    
+
 
     uvicorn_default:
         formatter: "uvicorn_default"
@@ -226,6 +226,9 @@ loggers:
     blib2to3:
         level: !env LOGLEVEL_BLIB2TO3, NOTSET
 
+    "blib2to3.pgen2.driver":
+        level: !env LOGLEVEL_BLIB2TO3, NOTSET
+
     libranet_django:
         level: !env LOGLEVEL_libranet_django, NOTSET
         handlers:
@@ -241,7 +244,7 @@ loggers:
         handlers:
             - django_db_backends_handler
         propagate': False
-    
+
     dotenv:
         level: !env LOGLEVEL_DOTENV, NOTSET
 
