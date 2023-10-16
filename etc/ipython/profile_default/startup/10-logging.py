@@ -29,6 +29,7 @@ libranet_logging.initialize()
 
 log = logging.getLogger("ipython-startup")  # name = "__main__"
 
+# import pdb;pdb.set_trace()
 log.debug("debug-message")
 log.info("info-message")
 log.warning("warning-message")
