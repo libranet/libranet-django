@@ -1149,13 +1149,13 @@ trio = ["trio (>=0.22.0,<0.26.0)"]
 
 [[package]]
 name = "httpie"
-version = "3.2.2"
+version = "3.2.3"
 description = "HTTPie: modern, user-friendly command-line HTTP client for the API era."
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "httpie-3.2.2-py3-none-any.whl", hash = "sha256:33082092553126e3e38395682c23121c3450472ffddb363eb895ad685d01800e"},
-    {file = "httpie-3.2.2.tar.gz", hash = "sha256:8bfb671f0b39505c197fdef3367f7f99af5d0e81a4e22289bb4c1f0e72251c90"},
+    {file = "httpie-3.2.3-py3-none-any.whl", hash = "sha256:c7db00b1996704fd603c3eb50f736e76129ff4ac2f0b37897165f639dc2be0a8"},
+    {file = "httpie-3.2.3.tar.gz", hash = "sha256:bbb72b4c2ec738301dcb61018f93325e55bc2720977df9a6742745fa3db313c3"},
 ]
 
 [package.dependencies]
@@ -1165,14 +1165,14 @@ defusedxml = ">=0.6.0"
 multidict = ">=4.7.0"
 pip = "*"
 Pygments = ">=2.5.2"
-requests = {version = ">=2.22.0", extras = ["socks"]}
+requests = {version = ">=2.22.0,<=2.31.0", extras = ["socks"]}
 requests-toolbelt = ">=0.9.1"
 rich = ">=9.10.0"
 setuptools = "*"
 
 [package.extras]
-dev = ["Jinja2", "flake8", "flake8-comprehensions", "flake8-deprecated", "flake8-mutable", "flake8-tuple", "pyopenssl", "pytest", "pytest-cov", "pytest-httpbin (>=0.0.6)", "pytest-lazy-fixture (>=0.0.6)", "pytest-mock", "pyyaml", "responses", "twine", "werkzeug (<2.1.0)", "wheel"]
-test = ["pytest", "pytest-httpbin (>=0.0.6)", "pytest-lazy-fixture (>=0.0.6)", "pytest-mock", "responses", "werkzeug (<2.1.0)"]
+dev = ["Jinja2", "flake8", "flake8-comprehensions", "flake8-deprecated", "flake8-mutable", "flake8-tuple", "pyopenssl", "pytest", "pytest-cov", "pytest-httpbin (>=0.0.6)", "pytest-mock", "pyyaml", "responses", "twine", "werkzeug (<2.1.0)", "wheel"]
+test = ["pytest", "pytest-httpbin (>=0.0.6)", "pytest-mock", "responses", "werkzeug (<2.1.0)"]
 
 [[package]]
 name = "httptools"
@@ -3263,13 +3263,13 @@ sphinx = ">=1.3.1"
 
 [[package]]
 name = "requests"
-version = "2.32.3"
+version = "2.31.0"
 description = "Python HTTP for Humans."
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.7"
 files = [
-    {file = "requests-2.32.3-py3-none-any.whl", hash = "sha256:70761cfe03c773ceb22aa2f671b4757976145175cdfca038c02654d061d6dcc6"},
-    {file = "requests-2.32.3.tar.gz", hash = "sha256:55365417734eb18255590a9ff9eb97e9e1da868d4ccd6402399eaf68af20a760"},
+    {file = "requests-2.31.0-py3-none-any.whl", hash = "sha256:58cd2187c01e70e6e26505bca751777aa9f2ee0b7f4300988b709f44e013003f"},
+    {file = "requests-2.31.0.tar.gz", hash = "sha256:942c5a758f98d790eaed1a29cb6eefc7ffb0d1cf7af05c3d2791656dbd6ad1e1"},
 ]
 
 [package.dependencies]
