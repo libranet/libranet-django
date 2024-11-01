@@ -32,7 +32,7 @@ targets = ["src", "tests"]
 include = '\.py$'  # regex -> single-quotes
 line-length = 120
 profile = "black"
-target_version = ["py311"]
+target-version = ["py311"]
 
 
 [tool.coverage.html]
@@ -155,29 +155,9 @@ typer = ">=0.0"
 
 
 [tool.poetry.group.dev.dependencies]
-absolufy-imports = ">=0.3"
-bandit = ">=1.7"
-black = { version = ">=22.0", allow-prereleases = true }
-flake8 = ">=4.0"
-flake8-bugbear = ">=23.2"
-flake8-docstrings = ">=1.6"
-flake8-pyproject = ">=1.2"
-flake8-pytest-style = ">=1.6"
-flake8-rst-docstrings = ">=0.2"
-isort = ">=5.10"
-# pdb++
-pep8-naming = ">=0.12"
-pre-commit = ">=2.14"
-pre-commit-hooks = ">=4.1"
-pydocstyle = ">=6.1"
-pylint = ">=2.12"
-ruff = ">=0.0"
-safety = ">=1.10"
 # extra django-deps
 django-stubs = ">=1.12.0"
 watchfiles = ">=0.18.0"
-
-
 
 [tool.poetry.group.deploy.dependencies]
 uvicorn = { extras = ["standard"], version = ">=0.20" }
@@ -207,11 +187,33 @@ ipdb = ">=0.13"
 ipykernel = ">=6.9"
 ipython = ">=8.4"
 
+[tool.poetry.group.lint.dependencies]
+absolufy-imports = ">=0.3"
+black = { version = ">=22.0", allow-prereleases = true }
+flake8 = ">=4.0"
+flake8-bugbear = ">=23.2"
+flake8-docstrings = ">=1.6"
+flake8-pyproject = ">=1.2"
+flake8-pytest-style = ">=1.6"
+flake8-rst-docstrings = ">=0.2"
+isort = ">=5.10"
+# pdb++
+pep8-naming = ">=0.12"
+pre-commit = ">=2.14"
+pre-commit-hooks = ">=4.1"
+pydocstyle = ">=6.1"
+pylint = ">=2.12"
+ruff = ">=0.0"
+
 [tool.poetry.group.profiling.dependencies]
 gprof2dot = ">=2022.7"
 importtime-waterfall = ">=1.0"
 pyinstrument = ">=4.4"
 tuna = ">=0.5"
+
+[tool.poetry.group.security.dependencies]
+bandit = ">=1.7"
+safety = ">=1.10"
 
 [tool.poetry.group.testing.dependencies]
 coverage = { extras = ["toml"], version = ">=6.2" }
