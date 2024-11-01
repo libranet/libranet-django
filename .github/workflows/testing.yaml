@@ -42,11 +42,11 @@ jobs:
                 os:
                     - ubuntu-latest
                 python-version:
-                    - "3.8"
-                    - "3.9"
+                    # - "3.8"
+                    # - "3.9"
                     - "3.10"
                     - "3.11"
-                    # - "3.12-dev"
+                    - "3.12"
                 # include:
                 #     # Run 3.12 tests with relaxed constraints
                 #     - python-version: "3.12-dev"

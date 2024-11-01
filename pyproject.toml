@@ -31,8 +31,8 @@ targets = ["src", "tests"]
 [tool.black]
 include = '\.py$'  # regex -> single-quotes
 line-length = 120
-profile = "black"
-target-version = ["py311"]
+# profile = "black"
+target-version = ["py312"]
 
 
 [tool.coverage.html]
