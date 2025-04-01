@@ -62,14 +62,14 @@ files = [
 
 [[package]]
 name = "argcomplete"
-version = "3.6.0"
+version = "3.6.1"
 description = "Bash tab completion for argparse"
 optional = false
 python-versions = ">=3.8"
-groups = ["testing"]
+groups = ["dev", "testing"]
 files = [
-    {file = "argcomplete-3.6.0-py3-none-any.whl", hash = "sha256:4e3e4e10beb20e06444dbac0ac8dda650cb6349caeefe980208d3c548708bedd"},
-    {file = "argcomplete-3.6.0.tar.gz", hash = "sha256:2e4e42ec0ba2fff54b0d244d0b1623e86057673e57bafe72dda59c64bd5dee8b"},
+    {file = "argcomplete-3.6.1-py3-none-any.whl", hash = "sha256:cef54d7f752560570291214f0f1c48c3b8ef09aca63d65de7747612666725dbc"},
+    {file = "argcomplete-3.6.1.tar.gz", hash = "sha256:927531c2fbaa004979f18c2316f6ffadcfc5cc2de15ae2624dfe65deaf60e14f"},
 ]
 
 [package.extras]
@@ -3970,7 +3970,7 @@ version = "77.0.3"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
 optional = false
 python-versions = ">=3.9"
-groups = ["dev", "dist", "security", "typing", "webtesting"]
+groups = ["dist", "security", "typing", "webtesting"]
 files = [
     {file = "setuptools-77.0.3-py3-none-any.whl", hash = "sha256:67122e78221da5cf550ddd04cf8742c8fe12094483749a792d56cd669d6cf58c"},
     {file = "setuptools-77.0.3.tar.gz", hash = "sha256:583b361c8da8de57403743e756609670de6fb2345920e36dc5c2d914c319c945"},
