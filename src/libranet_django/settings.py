@@ -1,4 +1,5 @@
-"""libranet_django.settings.
+"""
+libranet_django.settings.
 
 Django settings for libranet_django project.
 
@@ -10,11 +11,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-import os 
-import pkg_resources
-import pathlib as pl
-import typing as tp
 
+import os
+import pathlib as pl
+
+import pkg_resources
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = pl.Path(__file__).resolve().parent.parent
@@ -30,7 +31,7 @@ SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DJANGO_DEBUG")
 
-ALLOWED_HOSTS: tp.List[str]  = []
+ALLOWED_HOSTS: list[str] = []
 
 
 # Application definition
@@ -82,7 +83,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": DB_DIR / "db.sqlite3",
-    }
+    },
 }
 
 
@@ -128,7 +129,6 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-
 # Static files like css/js/png. cfr. https://docs.djangoproject.com/en/2.2/howto/static-files/
 STATIC_VERSION = "v1"
 STATIC_ROOT = os.getenv("STATIC_DIR")  # cfg.static_dir
@@ -142,10 +142,9 @@ ADMINS = [
 ]
 
 
-
 STATICFILES_DIRS = [
     # cfg.package_static_dir,
-    pl.Path(pkg_resources.resource_filename("libranet_django", "static"))
+    pl.Path(pkg_resources.resource_filename("libranet_django", "static")),
 ]
 
 STATICFILES_FINDERS = [

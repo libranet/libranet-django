@@ -1,18 +1,22 @@
-"""libranet_django.cli.
+"""
+libranet_django.cli.
 
 Command-line interface.
 """
-from libranet_django import __version__
 
 import typer
 
+from libranet_django import __version__
+
 app = typer.Typer()
 
+
 @app.callback()
-def version_callback(value: bool):
+def version_callback(*, value: bool = False) -> None:
+    """Display the version of the application."""
     if value:
         typer.echo(f"{__version__}")
-        raise typer.Exit()
+        raise typer.Exit
 
 
 @app.command()

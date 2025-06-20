@@ -1,4 +1,5 @@
 """Sphinx configuration."""
+
 project = "libranet-django"
 author = "Wouter Vanden Hove"
 copyright = "2023, Wouter Vanden Hove"

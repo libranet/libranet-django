@@ -1,4 +1,10 @@
 """libranet_django."""
-__version__ = "0.1"
-__author__ = "Wouter Vanden Hove"
-__license__ = "MIT"
+
+from libranet_logging._version import __author__, __copyright__, __license__, __version__
+
+__all__ = [
+    "__author__",
+    "__copyright__",
+    "__license__",
+    "__version__",
+]

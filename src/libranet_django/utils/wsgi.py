@@ -1,4 +1,5 @@
-"""libranet_django.utils.wsgi.
+"""
+libranet_django.utils.wsgi.
 
 WSGI config for libranet_django project.
 

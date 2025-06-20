@@ -1,7 +1,3 @@
 # Centos / AlmaLinux / Rocky Linux
 
 # dnf install <package>
-
-# apache-airflow-client
-# graphviz-devel
-# mariadb-devel

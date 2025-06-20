@@ -16,6 +16,7 @@ We avoid executing code when debugging in ipdb by checking on env-var IS_IPYTHON
 which is set in sitecustomize.
 
 """
+
 print(f"\nRunning {__file__}")
 
 import logging
@@ -27,10 +28,10 @@ url = "https://example.com"
 
 # from demo_flask.formatter import HttpFormatter
 
-class HttpFormatter(logging.Formatter):
 
+class HttpFormatter(logging.Formatter):
     def format_headers(self, d):
-        return '\n'.join(f'{k}: {v}' for k, v in d.items())
+        return "\n".join(f"{k}: {v}" for k, v in d.items())
 
     def formatMessage(self, record):
         result = super().formatMessage(record)
@@ -56,10 +57,11 @@ class HttpFormatter(logging.Formatter):
             resp_headers=self.format_headers(record.res.headers),
         )
 
+
 #         return result
 
 
-formatter = HttpFormatter('{asctime} {levelname} {name} {message}', style='{')
+formatter = HttpFormatter("{asctime} {levelname} {name} {message}", style="{")
 handler = logging.StreamHandler()
 handler.setFormatter(formatter)
 
@@ -68,17 +70,18 @@ log = logging.getLogger("httplogger")
 
 # log.handlers.append(handler)
 
+
 def log_roundtrip(response, *args, **kwargs):
-    extra = {'req': response.request, 'res': response}
+    extra = {"req": response.request, "res": response}
     # breakpoint()
-    log.debug('HTTP roundtrip', extra=extra)
+    log.debug("HTTP roundtrip", extra=extra)
+
 
 session = requests.Session()
-session.hooks['response'].append(log_roundtrip)
+session.hooks["response"].append(log_roundtrip)
 
 resp = session.get(url, timeout=5)
 # resp = session.get(url, hooks={'response': [log_roundtrip]})
-
 
 
 # def print_url(r, *args, **kwargs):
@@ -92,5 +95,3 @@ resp = session.get(url, timeout=5)
 
 # requests.get('https://httpbin.org/', hooks={'response': print_url})
 # r = requests.get('https://httpbin.org/', hooks={'response': [print_url, log_roundtrip, record_hook]})
-
-

@@ -1,5 +1,6 @@
 # pylint: disable=import-outside-toplevel
-"""conftest.py - custom pytest-plugins.
+"""
+conftest.py - custom pytest-plugins.
 
 This file contains the configurations that we need for running our tests:
 For more information about conftest.py, please see:
@@ -19,8 +20,8 @@ you will not be able to run pytest, instead it will fail with:
     > ImportError: Error importing plugin "_helpers": No module named '_helpers'
 
 """
-import pytest
 
+import pytest
 from typer.testing import CliRunner
 
 pytest_plugins = [
@@ -28,7 +29,7 @@ pytest_plugins = [
 ]
 
 
-@pytest.fixture()
+@pytest.fixture
 def cli_runner() -> CliRunner:
     """Fixture for invoking command-line interfaces."""
     return CliRunner()

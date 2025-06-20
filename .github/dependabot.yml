@@ -1,23 +1,14 @@
 version: 2
 
 updates:
+
   - package-ecosystem: github-actions
     directory: "/"
     schedule:
       interval: "monthly"
 
-  - package-ecosystem: pip
-    directory: "/.github/workflows"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: pip
-    directory: "/docs"
-    schedule:
-      interval: "monthly"
-
-  - package-ecosystem: pip
-    directory: "/"
+  - package-ecosystem: "pip" # See documentation for possible values
+    directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
     versioning-strategy: lockfile-only

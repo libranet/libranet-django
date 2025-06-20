@@ -1,6 +1,7 @@
 # pylint: disable=import-outside-toplevel
 # pylint: disable=missing-function-docstring
 """Testing of module libranet_django.__init__."""
+
 import packaging.version
 
 

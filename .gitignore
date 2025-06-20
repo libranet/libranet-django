@@ -34,8 +34,6 @@
 # distribution / packaging
 /dist/
 
-/.cookiecutter.json
-
 # .env can contain secrets
 /.env
 

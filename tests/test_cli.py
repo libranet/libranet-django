@@ -1,6 +1,6 @@
 """Tests for module libranet_django.cli."""
-from typer.testing import CliRunner
 
+from typer.testing import CliRunner
 
 # def test_main_succeeds(runner: CliRunner) -> None:
 #     """It exits with a status code of zero."""
@@ -8,7 +8,7 @@ from typer.testing import CliRunner
 #     assert result.exit_code == 0
 
 
-def test_cli():
+def test_cli() -> None:
     from libranet_django.cli import main
 
     # Invoke the main() function
@@ -17,8 +17,7 @@ def test_cli():
     assert result.output.strip() == "libranet_django."
 
 
-
-def test_app_version(cli_runner):
+def test_app_version(cli_runner) -> None:
     from libranet_django.cli import app
 
     result = cli_runner.invoke(app, ["--version"])

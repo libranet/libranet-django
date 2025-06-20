@@ -2,7 +2,8 @@
 # pylint: disable=unused-import
 # pylint: disable=wrong-import-position
 # pylint: disable=invalid-name
-"""IPython startup-file, outside of PYTHONPATH.
+"""
+IPython startup-file, outside of PYTHONPATH.
 
 Files in this startup-folder will be run in lexicographical order,
 so you can control the execution order of files with a prefix, e.g.::
@@ -14,7 +15,7 @@ so you can control the execution order of files with a prefix, e.g.::
 return-statements are not allowed.
 
 """
-print(f"\nRunning {__file__}")
+
 
 import logging
 import os  # noqa

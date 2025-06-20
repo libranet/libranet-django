@@ -1,4 +1,5 @@
-"""libranet_django.utils.asgi.
+"""
+libranet_django.utils.asgi.
 
 ASGI config for libranet_django-project.
 
